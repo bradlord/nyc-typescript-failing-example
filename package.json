@@ -1,0 +1,43 @@
+{
+  "name": "nyc-typescript-trouble",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bradley Lord <blord@mail.acponline.org>",
+  "license": "MIT",
+  "nyc": {
+      "include": [
+        "src/*.{js,ts,tsx}"
+      ],
+      "exclude": [
+        "**/node_modules/**",
+        "src/**/*.d.ts"
+      ],
+      "extension": [
+        ".js",
+        ".ts",
+        ".tsx"
+      ],
+      "require": [
+        "source-map-support/register",
+        "ts-node/register"
+      ],
+      "reporter": [
+        "json",
+        "html"
+      ],
+      "produceSourceMap": true,
+      "sourceMap": true,
+      "instrument": true,
+      "all": true
+    },
+  "dependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.14",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "ts-node": "^3.2.0",
+    "tsconfig-paths": "^2.2.0",
+    "typescript": "^2.4.1"
+  }
+}
